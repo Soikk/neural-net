@@ -384,12 +384,12 @@ int main(){
 		if(testing%300 == 0){
 			printf("Tested %d so far\n", testing+1);
 		}
-		printImage(im);
+		/*printImage(im);
 		printf("Expected:\n");
 		printMatrix(expectedOutput);
 		printf("Got:\n");
 		printMatrix(output);
-		printf("Max output: %d\n", maxOutputs(output));
+		printf("Max output: %d\n", maxOutputs(output));*/
 		if(maxOutputs(output) == im->label){
 			count++;
 		}
@@ -397,8 +397,8 @@ int main(){
 		output = NULL;
 		freeImage(&im);
 		++testing;
-		if(testing == 10)
-			break;
+		//if(testing == 10)
+		//	break;
 	}
 	fclose(testFP);
 
